@@ -1,3 +1,6 @@
 [submodule "api_ipf"]
 	path = api_ipf
-	url = git@github.com:erigones/api_ipf.git
+	url = https://github.com/Nixo-SK/api_ipf.git
+[submodule "api_core"]
+	path = api_core
+	url = https://github.com/Nixo-SK/api_core.git
