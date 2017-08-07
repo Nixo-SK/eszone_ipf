@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, include, url
+
 from eszone_ipf.settings import API_VERSION_PREFIX
 
 

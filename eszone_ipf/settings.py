@@ -9,8 +9,8 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 # DEVELOPMENT (DEFAULT) SETTINGS
 # Secret key for development use only !
@@ -20,7 +20,6 @@ SECRET_KEY = '%qlxd*cw(eftb8-w1bxlv^0_rj%am)@u3#$s6ez&^&_#=iaa9i'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # PRODUCTION SETTINGS
 # You should run this application with ENV=production set in your production environment
@@ -35,7 +34,6 @@ if os.environ.get('ENV') == 'production':
     ALLOWED_HOSTS = [
         '10.10.10.10',
     ]
-
 
 # GENERAL SETTINGS
 # Definition of used applications

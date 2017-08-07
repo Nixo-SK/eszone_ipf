@@ -1,4 +1,5 @@
 import os
+
 from json import dumps, loads
 from sys import argv
 from subprocess import Popen
@@ -126,7 +127,8 @@ class ConfigHandler():
         Method that requests activation of a specific configuration file.
         """
         try:
-            pretty_print(get(''.join([self.URL, 'activate/', self.title, '/'])))
+            pretty_print(get(''.join([self.URL, 'activate/', 
+            						  self.title, '/'])))
         except Exception as e:
             print(e)
 
@@ -208,7 +210,8 @@ try:
         except IndexError:
             # show all configuration files
             try:
-                if argv[2] in ['show', 'get', 'post', 'put', 'delete', 'modify']:
+                if argv[2] in ['show', 'get', 'post', 
+                			   'put', 'delete', 'modify']:
                     print('Function needs an argument.')
                 else:
                     print('Error: Unknown command.')
@@ -249,7 +252,8 @@ try:
         try:
             if argv[2]:
                 pretty_print(
-                    get(''.join([URL, argv[1], '/', ' '.join(argv[2:]), '/'])))
+                    get(''.join([URL, argv[1], '/', 
+                    			 ' '.join(argv[2:]), '/'])))
         except IndexError as e:
             print('{} needs argument.'.format(argv[1]))
         except Exception as e:
@@ -260,7 +264,8 @@ try:
         try:
             if argv[2]:
                 pretty_print(
-                    get(''.join([URL, argv[1], '/', ' '.join(argv[2:]), '/'])))
+                    get(''.join([URL, argv[1], '/', 
+                    			 ' '.join(argv[2:]), '/'])))
         except IndexError as e:
             pretty_print(get(''.join([URL, argv[1], '/'])))
         except Exception as e:
@@ -271,7 +276,7 @@ try:
             print(f.read())
     
     else:
-        print('Error: Unknown command.\nUse help by running with "help" argument')
+        print('Error: Unknown command.\nUse "help" argument')
 
 except Exception as e:
     print e
